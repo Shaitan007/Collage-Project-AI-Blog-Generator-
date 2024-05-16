@@ -4,7 +4,7 @@ import google.generativeai as genai
 from mistletoe import markdown
 app = Flask(__name__)
 
-API_KEY = 'AIzaSyBLiYtc53Kr3uP0e7r6-Pgh4QfoP8YyBv4'
+API_KEY = 'Pi keay here'
 
 # Endpoint to render the form
 @app.route('/')
