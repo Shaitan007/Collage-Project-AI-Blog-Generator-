@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='blog2.css') }}">
+      <script src="blog2.js"></script>   
+      <script src="path/to/clipboard.min.js"></script>
+    <title>Generated Blog</title>
+
+</head>
+<body>
+    <body><h1>Breaking News: </h1>
+      <h2>Paragraphs Demand Equal Rights (and More Whitespace)</h2>
+    </body>    
+    
+      <div id="container">
+        
+        <header>
+         <a target="_blank"> 
+            <div id="api-content">
+                {{ mdHtml|safe }}  
+            </div>      
+        </header>
+        
+        <button class="Btn" id="copyText" readonly>
+            <svg viewBox="0 0 512 512" class="svgIcon" height="1em"><path d="M288 448H64V224h64V160H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64zm-64-96H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64z"></path></svg>
+            <p class="text">COPY</p>
+            <span class="effect"></span>
+          </button>
+    
+    </div>
+        
+</body>
+</html>
