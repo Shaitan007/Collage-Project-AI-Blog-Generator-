@@ -29,6 +29,31 @@
             <span class="effect"></span>
           </button>
     
+          <script>
+            document.getElementById('copy-cotennt').addEventListener('click', function() {
+              // Select the content of the div
+              var content = document.querySelector('.contetn-dic-new').innerText;
+          
+              // Create a temporary textarea element to hold the content
+              var tempTextarea = document.createElement('textarea');
+              tempTextarea.value = content;
+              document.body.appendChild(tempTextarea);
+          
+              // Select the text in the textarea
+              tempTextarea.select();
+              tempTextarea.setSelectionRange(0, 99999); // For mobile devices
+          
+              // Copy the text to the clipboard
+              document.execCommand('copy');
+          
+              // Remove the temporary textarea
+              document.body.removeChild(tempTextarea);
+          
+              // Optional: Alert the user that the content has been copied
+              alert('Content copied to clipboard!');
+          });
+          
+          </script>
     </div>
         
 </body>
